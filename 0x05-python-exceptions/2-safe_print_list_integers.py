@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""
- divides 2 integers and prints the result.
-    """
 
 
-def safe_print_division(a, b):
-    try:
-        x = a / b
-    except (TypeError, ZeroDivisionError):
-        x = None
-    finally:
-        print("Inside result: {}".format(x))
-        return x
+def safe_print_division(my_list=[], x=0):
+    ret = 0
+    for i in range(0, x):
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            ret += 1
+        except (ValueError, TypeError):
+            continue
+    print("")
+    return (ret)
