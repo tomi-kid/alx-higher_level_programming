@@ -1,0 +1,49 @@
+Python 3.8.10 (default, Mar 15 2022, 12:22:08) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> type(my_list)
+<class '1-my_list.MyList'>
+>>> print(my_list)
+[]
+>>> my_list = MyList([1, 2, 3])
+>>> print(my_list)
+[1, 2, 3]
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'NoneType' object is not iterable
+>>> my_list = MyList([1, 2], [3, 4])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list expected at most 1 argument, got 2
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 2, 3, 1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 1, 2, 2, 3, 3, 4, 5]
+>>> print(my_list)
+[1, 2, 3, 1, 4, 2, 3, 5]
+>>> my_list = MyList()
+>>> my_list.append("ALX")
+>>>  my_list.append("Africa")
+  File "<stdin>", line 1
+    my_list.append("Africa")
+    ^
+IndentationError: unexpected indent
+>>> my_list.append("Africa")
+>>> my_list.append("School")
+>>> my_list.append("Best")
+>>> my_list.append("Ethiopia")
+>>> print(my_list)
+['ALX', 'Africa', 'School', 'Best', 'Ethiopia']
+>>> my_list.print_sorted()
+['ALX', 'Africa', 'Best', 'Ethiopia', 'School']
+>>> print(my_list)
+['ALX', 'Africa', 'School', 'Best', 'Ethiopia']
+>>> 
