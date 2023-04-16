@@ -6,21 +6,15 @@ import turtle
 
 
 class Base:
-    """Represent the base model.
-
-    Represents the "base" for all other classes in project 0x0C*.
-
-    Attributes:
-        __nb_objects (int): The number of instantiated Bases.
+    """The class Base has a private class attribute __nb_objects 
+        which keeps track of the number of instances created.
     """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize a new Base.
-
-        Args:
-            id (int): The identity of the new Base.
+        """If id is not None, it is assigned to the public instance attribute id.
+            else  id is None, __nb_objects is incremented and the new value is assigned to id.
         """
         if id is not None:
             self.id = id
@@ -139,8 +133,9 @@ class Base:
                 else:
                     fieldnames = ["id", "size", "x", "y"]
                 list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
-                list_dicts = [dict([k, int(v)] for k, v in d.items())
-                              for d in list_dicts]
+                list_dicts = [
+                    dict([k, int(v)] for k, v in d.items()) for d in list_dicts
+                ]
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
