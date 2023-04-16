@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+import sys
+sys.path.append('../models')
 
 """ 1-main """
 
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 if __name__ == "__main__":
     r1 = Rectangle(10, 2)
