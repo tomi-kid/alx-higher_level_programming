@@ -6,15 +6,15 @@ import turtle
 
 
 class Base:
-    """The class Base has a private class attribute __nb_objects 
-        which keeps track of the number of instances created.
+    """The class Base has a private class attribute __nb_objects
+    which keeps track of the number of instances created.
     """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """If id is not None, it is assigned to the public instance attribute id.
-            else  id is None, __nb_objects is incremented and the new value is assigned to id.
+        """it's assigned to the public instance attribute id.
+        else  id is None,__nb_objects++ and the new value is assigned to id.
         """
         if id is not None:
             self.id = id
