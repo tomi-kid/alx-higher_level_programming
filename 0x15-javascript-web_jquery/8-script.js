@@ -1,7 +1,7 @@
 // JavaScript script that fetches and lists the title for all movies
 
 $(() => {
-  $.get('https://swapi-api.hbtn.io/api/films/?format=json', (data, textStatus) => {
+  $.get('https://swapi-api.alx-tools.com/api/films/?format=json', (data, textStatus) => {
     if (textStatus === 'success') {
       const films = data.results;
       films.forEach(film => {
